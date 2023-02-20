@@ -1,0 +1,14 @@
+.cards{
+  display: flex;
+  justify-content: space-between;
+  list-style-type: disc;
+}
+
+@media (max-width: 700px) {
+  .cards{
+    display: block;
+    font-weight: 900;
+    list-style: none;
+    color: pink;
+  }
+}

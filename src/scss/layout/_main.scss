@@ -1,0 +1,32 @@
+section {
+
+
+  font-family: $font-main, sans-serif;
+
+}
+section:nth-child(even) {
+  background-color: rgba(#f15412, 0.3);
+}
+
+section:nth-child(odd) {
+  background-color: rgba(#34b3f1, 0.3);
+}
+
+
+.vh100 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 100px;
+  color: rgb(25, 139, 0);
+  text-transform: uppercase;
+
+  @include tablet {
+    font-size: 50px;
+  }
+
+  @include phablet {
+    font-size: 30px;
+  }
+}

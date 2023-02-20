@@ -1,0 +1,18 @@
+.templatesArticle {
+  background-image: url("../img/test-bg2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: salmon;
+  line-height: 1.5;
+  font-family: Montserrat;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 900;
+  color: blue;
+  padding-top: 30px;
+
+  @include tablet {
+    background-color: yellowgreen;
+  }
+}

@@ -1,0 +1,44 @@
+@mixin font ($name, $weightName, $weight: 400, $style: normal) {
+	@font-face {
+		font-family: "#{$name}"; // Montessarat  
+		src: url('../font/#{ $name }-#{ $weightName }.woff2') format('woff2'),
+		url('../font/#{ $name }-#{ $weightName }.woff') format('woff');
+		font-weight: $weight; // 100, ... , 900
+		font-style: $style; //только normal
+		font-display: swap;
+	}
+}
+
+@mixin fontit ($name, $weightName, $weight: 400, $style: italic) {
+	@font-face {
+		font-family: "#{$name}"; // Montessarat  
+		src: url('../font/#{ $name }-#{ $weightName }#{ $style}.woff2') format('woff2'),
+		url('../font/#{ $name }-#{ $weightName }#{ $style}.woff') format('woff');
+		font-weight: $weight; // 100, ... , 900
+		font-style: $style; //только italic
+		font-display: swap;
+	}
+}
+
+@include font (Montserrat, Bold, 700);
+@include font (Raleway, Thin, 100);
+@include font (Raleway, Bold, 700);
+
+
+
+//@include font (Montserrat, bold, 700);
+//@include fontit (Montserrat, black, 900) 
+
+// Value	$weightName
+//  100 -- Thin (Hairline)
+//  200	-- Extra Light (Ultra Light)
+//  300	-- Light
+//  400	-- Normal (Regular)
+//  500	-- Medium
+//  600	-- Semi Bold (Demi Bold)
+//  700	-- Bold
+//  800	-- Extra Bold (Ultra Bold)
+//  900	-- Black (Heavy)
+
+//=========================================================================================================
+

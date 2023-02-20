@@ -1,0 +1,66 @@
+<article class="templatesArticle">
+    <h3 class="title">HTML GULP TEMPLATE</h3>
+    <div>
+        <!-- исходный формат картинки jpg - png, потом обернется в picture и добавится webp -->
+        <img src="img/test-koba.png" alt="pingwa" width="300">
+    </div>
+    <!-- сборка монохромного спрайта -->
+
+    <div class="monosprite">
+        <svg>
+            <!-- <use xlink:href="img/sprites/sprite-mono.svg#home1"></use> -->
+            <!-- <use xlink:href="img/sprites/sprite-mono.svg#home2"></use>
+            <use xlink:href="img/sprites/sprite-mono.svg#home3"></use> -->
+            <use xlink:href="img/sprites/sprite-mono.svg#rocketman"></use>
+            <!-- !!! <use xlink:href="img/sprite.svg#home1"--------после # имя нужной свг!!! -->
+            <!-- используется имя нужной свг, то же, что у нее было до спрайта в папке src, нужное имя вставляется после # -->
+        </svg>
+    </div>
+    <div class="multysprite">
+        <svg>
+            <use xlink:href="img/sprites/sprite-multy.svg#capitel"></use>
+        </svg>
+    </div>
+    <!-- общие настройки слайдера и его эл-тов в SCSS/../test-slick.scss -->
+    <h2>Swiper slider template</h2>
+    <div class="swiper  test-swiper">
+        <!-- !! добавить класс к swiper чтобы отключить скролл по тачу swiper-no-swiping  -->
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide test-swiper-slide">
+                <img class="test-swiper-img" src="img/test-hand.png" alt="">
+            </div>
+            <div class="swiper-slide test-swiper-slide">
+                <img class="test-swiper-img" src="img/test-donut.png" alt="">
+            </div>
+            <div class="swiper-slide test-swiper-slide">
+                <img class="test-swiper-img" src="img/test-sock.png" alt="">
+            </div>
+            <div class="swiper-slide test-swiper-slide">
+                <img class="test-swiper-img" src="img/test-hand.png" alt="">
+            </div>
+            <div class="swiper-slide test-swiper-slide">
+                <img class="test-swiper-img" src="img/test-donut.png" alt="">
+            </div>
+            <div class="swiper-slide test-swiper-slide">
+                <img class="test-swiper-img" src="img/test-sock.png" alt="">
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <!-- !!! как изменить расстояние между точками -->
+        <div class="swiper-pagination test-swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev test-swiper-button-prev"></div>
+        <div class="swiper-button-next test-swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar test-swiper-scrollbar"></div>
+    </div>
+    <h2>GSAP template</h2>
+    <div class="test-gasp-container">
+        <div class="test-gsap-box-1"></div>
+        <div class="test-gsap-box-2"></div>
+    </div>
+</article>

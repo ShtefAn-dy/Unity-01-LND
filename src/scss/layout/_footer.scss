@@ -1,0 +1,17 @@
+footer {
+  background: rgb(137, 131, 73);
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  color: #fff;
+
+  @include tablet {
+    font-size: 50px;
+  }
+
+  @include phablet {
+    font-size: 30px;
+  }
+}

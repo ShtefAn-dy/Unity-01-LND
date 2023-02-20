@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.min.css">
+    <!-- для современных браузеров -->
+    <link rel="icon" href="img/favicon/favicon.svg">
+    <!-- Apple Touch для IOS -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- для Android и будущих браузеров -->
+    <link rel="manifest" href="manifest.json">
+    <title>HTML GULP Template</title>
+
+</head>
+
+<body>
+    <div class="container-outer">
+        @include("chunk/header.html")
+
+        <main class="main">
+            <!-- стили для шаблонов секций в _main.scss -->
+            <!-- !! id не удалять, должны совпадать с a.href в chunks/header.html -->
+            @include("chunk/sections/01home.html")
+            <!-- @include("chunk/sections/02aboutus.html")
+            @include("chunk/sections/03categories.html")
+            @include("chunk/sections/04gallery.html")
+            @include("chunk/sections/05events.html")
+            @include("chunk/sections/06blog.html")
+            @include("chunk/sections/07contactus.html") -->
+
+            <!-- ниже идут настройки слайдеров, svg, анимации и т.п. -->
+            <!-- @include("chunk/templates.html") -->
+
+        </main>
+        @include("chunk/footer.html")
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

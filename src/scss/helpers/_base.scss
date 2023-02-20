@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  // display: flex;
+  // flex-direction: column;
+  box-sizing: border-box;
+
+  min-height: 100vh;
+
+  
+  // font-family: $font-family-primary;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.vhidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container-outer {
+  @include container-outer;
+}
+
+.container-inner {
+  @include container-inner;
+  background: rgba(194, 22, 22, 0.3);
+}

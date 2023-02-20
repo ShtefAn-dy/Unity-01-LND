@@ -1,0 +1,60 @@
+.test-swiper {
+  background-color: rgba(0, 0, 255, 0.1);
+  max-width: 100%;
+  //  max-width определяет ширину слайдера
+  margin-left: 20px;
+  margin-right: 20px;
+  height: 350px;
+  // height включает место для буллетов и скролла, чтобы вынести их под слайд ипользуем аддинг
+  padding-bottom: 50px;
+}
+
+.test-swiper-slide {
+  background-color: rgba(0, 0, 255, 0.1);
+  width: 700px;
+  // ширина слайда роли не играет, определяет ширина контейнера
+  height: 100%;
+  margin-top: 10px;
+  // gap между слайдами задается св-вом spaceBetween слайдера
+
+}
+
+.test-swiper-img {
+  width: 200px;
+  height: 150px;
+}
+
+.test-swiper-pagination .swiper-pagination-bullet {
+  background: red;
+  opacity: 1;
+  width: 15px;
+  height: 15px;
+  margin: 0 30px !important;
+}
+
+.test-swiper-pagination .swiper-pagination-bullet-active {
+  background: yellow;
+  opacity: 0.2;
+  width: 15px;
+  height: 15px;
+}
+
+.test-swiper-button-prev::after  {
+  content: "левое";
+  color: red;
+  width: 30px;
+  height: 30px;
+  background: salmon;
+}
+
+.test-swiper-button-next::after  {
+  content: "pravoye";
+  color: red;
+  width: 60px;
+  height: 60px;
+  background: salmon;
+}
+
+.test-swiper-scrollbar {
+  color: red;
+}

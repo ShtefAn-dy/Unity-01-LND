@@ -1,0 +1,24 @@
+@import "../../node_modules/normalize.css/normalize.css";
+@import "../../node_modules/swiper/swiper-bundle.min.css";
+
+// !! последовательность подключения не изменять в helpers
+@import "helpers/variables";
+@import "helpers/media";
+@import "helpers/containers";
+@import "helpers/fontcreator";
+@import "helpers/base";
+
+// дефолтные стили внешних библиотек, слайдеров, и т.п.
+
+// стили секций 
+@import "layout/**/*scss";
+
+// стили элементов: заголовки, формы, кнопки, слайдеры
+@import "elements/*scss";
+
+// стили элементов, подключаемых в JSON файле
+@import 'block/*scss';
+
+
+
+

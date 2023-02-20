@@ -1,0 +1,19 @@
+extends layout/app
+
+block page
+
+  include chunk/header   
+
+  //- стили h1 в поддиректории title.scss
+  h1.title главная 
+
+  //- исходный формат картинки jpg - png, потом обернется в picture и добавится webp
+  img(src="img/test-koba.png", alt="icon3", width="300")
+  
+  //- стили класса cards в поддиректории cards.scss
+  ul.cards 
+    each item in card
+      li= item.name
+
+
+  include chunk/footer 

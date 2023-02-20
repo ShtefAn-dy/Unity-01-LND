@@ -1,0 +1,23 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url("../img/test-bg1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: salmon;
+  font-size: 22px;
+  line-height: 1.5;
+  font-family: "Arial";
+}
+
+@media (max-width: 700px){
+  body{
+    background-color: yellowgreen;
+  }
+}
+
+@import 'block/title.css';
+@import 'block/cards.css';
