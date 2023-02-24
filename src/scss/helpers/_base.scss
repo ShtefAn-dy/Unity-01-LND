@@ -6,19 +6,19 @@
 
 html {
   height: 100%;
-  font-size: 16px;
+  font-size: 62.5%;
 }
 
 body {
-  // display: flex;
-  // flex-direction: column;
-  box-sizing: border-box;
+   box-sizing: border-box;
 
   min-height: 100vh;
+  font-size: 1.6rem;
 
-  
-  // font-family: $font-family-primary;
+  font-family: var(--ff-main), Arial, Helvetica, sans-serif;
 }
+  
+ 
 
 img {
   max-width: 100%;
@@ -57,5 +57,5 @@ h6 {
 
 .container-inner {
   @include container-inner;
-  background: rgba(194, 22, 22, 0.3);
+  // background: rgba(194, 22, 22, 0.1);
 }

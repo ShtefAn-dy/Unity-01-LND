@@ -3,18 +3,47 @@
 // $wrapper-min: 280px !default;
 
 $wrapper-max: 1950px;
-$wrapper-min: 280px;
+$wrapper-min: 320px;
 
 // Контейнер
-$container-max-widths: 1950px;
+$container-max-widths: 1920px;
 $container-padding: 15px;
 
 // text olors
 
-$text-dark: rgba(0,0,0, 0.0);
-$text-light: rgba(255,255, 255, 1.0);
+// $ff-main: "Poppins";
 
+// User Styles
 
+:root {
+    // text colors
 
-$font-main: "Railway";
-$font-secondary: "Montserrat";
+    --txt-dark-0: rgba(0, 0, 0, 1.0);
+    --txt-dark-48: rgba(48, 48, 48, 1.0);
+    --txt-dark-102:rgba(102, 102, 102, 1.0);
+    --txt-dark-224:rgba(224, 224, 224, 1.0);
+    --txt-dark-234:rgba(234, 234, 234, 1.0);
+    --txt-dark-255: rgba(255, 255, 255, 1.0);
+
+    // Backgrounds and Details
+
+    --bg: rgba(255, 255, 255, 1.0);
+   
+    --dtl-orange: rgba(233, 132, 87, 1.0);
+    --dtl-green: rgba(27, 241, 173, 1.0);
+    --dtl-grey: rgba(224, 224, 224, 1.0);
+
+    // Fonts
+
+    --ff-main: "Poppins";
+
+    // Gaps, Margins and Paddings
+
+    --gap-v-5: 5rem;
+    --gap-v-10: 10rem;
+    --gap-v-15: 15rem;
+    --gap-v-20: 20rem;
+    --gap-v-25: 25rem;
+    
+
+}

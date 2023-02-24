@@ -1,160 +1,235 @@
 header {
-  background-color: green;
-  // padding: 30px;
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
-  // position: relative;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-image: url(../img/intro-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 0;
+  filter: contrast(1.6);
+  color: var(--txt-dark-255);
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.72), 10%, rgba(0, 0, 0, 0.22));
+    z-index: -1;
+  }
 }
 
-.header-container {
-  padding: 30px;
+// rgba(0,0,0, 0.32)
+
+.home {
+  position: relative;
+  }
+
+.home-top {
+  position: sticky;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  background: rgba(255, 0, 0, 0.1);
+  height: 4rem;
+}
+
+.home-logo {
+  width: 200px;
+  height: 50px;
+  background: #000;
+  //  !!убрать блочность
+  display: inline-block;
+}
+
+.home-body {
+  padding-top: 34rem;
+  padding-bottom: 32rem;
+  
+}
+
+.home-title {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: 0.3em;
+  font-size: 3.8rem;
+}
+
+.home-nav {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 30px);
+  background: rgba(255, 0, 0, 0.1);
+  height: 40px;
+}
+
+.home-nav-list {
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(255, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  position: relative;
 }
 
-.header__logo {
-  background-color: #fff;
-  padding: 5px;
+.home-nave-item {
+  list-style: none;
+
+}
+
+.home-nav-link {
+  color: inherit;
   text-decoration: none;
 }
+
+
+.burger {}
+
+.burger-line {}
+
+
+
+
+
 
 /* --------------Common Styles Ends Above---------------- */
 
 /* --------------Here the Burger Starts------------------ */
 
 // ** лочим скролл body при открытом меню
-.lock {
-  overflow: hidden;
-}
+// .lock {
+//   overflow: hidden;
+// }
 
-.menu__icon {
-  display: none;
+// .menu__icon {
+//   display: none;
 
-  & span {
-    position: absolute;
-    top: calc(50% - 2px);
-    left: 0;
-    background: yellowgreen;
-    width: 100%;
-    height: 4px;
-    transition: all 0.2s ease-in-out;
+//   & span {
+//     position: absolute;
+//     top: calc(50% - 2px);
+//     left: 0;
+//     background: yellowgreen;
+//     width: 100%;
+//     height: 4px;
+//     transition: all 0.2s ease-in-out;
 
-    &:first-child {
-      top: 0;
-      background: blue;
-    }
+//     &:first-child {
+//       top: 0;
+//       background: blue;
+//     }
 
-    &:last-child {
-      top: auto;
-      bottom: 0;
-      background: red;
-    }
-  }
+//     &:last-child {
+//       top: auto;
+//       bottom: 0;
+//       background: red;
+//     }
+//   }
 
-  &.active span {
-    transform: scale(0);
+//   &.active span {
+//     transform: scale(0);
 
-    &:first-child {
-      transform: rotate(45deg);
-      top: calc(50% - 2px);
-    }
+//     &:first-child {
+//       transform: rotate(45deg);
+//       top: calc(50% - 2px);
+//     }
 
-    &:last-child {
-      transform: rotate(-45deg);
-      bottom: calc(50% - 2px);
-    }
-  }
+//     &:last-child {
+//       transform: rotate(-45deg);
+//       bottom: calc(50% - 2px);
+//     }
+//   }
 
-  @include tablet {
-    display: block;
-    width: 30px;
-    height: 30px;
-    background: yellow;
-    position: relative;
-    z-index: 5;
-    cursor: pointer;
-  }
-}
+//   @include tablet {
+//     display: block;
+//     width: 30px;
+//     height: 30px;
+//     background: yellow;
+//     position: relative;
+//     z-index: 5;
+//     cursor: pointer;
+//   }
+// }
 
-.menu__body {
-  transition: all 0.4s ease-in-out;
+// .menu__body {
+//   transition: all 0.4s ease-in-out;
 
-  &.active {
-    left: 0;
-  }
+//   &.active {
+//     left: 0;
+//   }
 
-  @include tablet {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-  }
+//   @include tablet {
+//     position: absolute;
+//     top: 0;
+//     left: -100%;
+//     height: 100vh;
+//     width: 100%;
+//     background-color: rgba(0, 0, 0, 0.3);
+//   }
 
-  @include phablet {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    height: 100vh;
-    width: 100%;
-    background-color: #f15412;
-    overflow: auto;
-    display: flex;
-  }
-}
+//   @include phablet {
+//     position: absolute;
+//     top: 0;
+//     left: -100%;
+//     height: 100vh;
+//     width: 100%;
+//     background-color: #f15412;
+//     overflow: auto;
+//     display: flex;
+//   }
+// }
 
-.menu__list {
-  list-style-type: none;
-  display: flex;
-  gap: 30px;
+// .menu__list {
+//   list-style-type: none;
+//   display: flex;
+//   gap: 30px;
 
-  @include tablet {
-    flex-direction: column;
-    padding-top: 100px;
-    padding-left: 200px;
-    gap: 10;
-    height: 100%;
-    width: 55%;
-    // background: #f15413; 
-    background: green;
-    overflow: auto;
-  }
+//   @include tablet {
+//     flex-direction: column;
+//     padding-top: 100px;
+//     padding-left: 200px;
+//     gap: 10;
+//     height: 100%;
+//     width: 55%;
+// background: #f15413; 
+//     background: green;
+//     overflow: auto;
+//   }
 
-  @include phablet {
-    flex-direction: column;
-    width: 100%;
-    padding-top: 60px;
-    padding-left: 120px;
-    gap: 0;
-    margin: auto;
-    background: yellow;
-  }
-}
+//   @include phablet {
+//     flex-direction: column;
+//     width: 100%;
+//     padding-top: 60px;
+//     padding-left: 120px;
+//     gap: 0;
+//     margin: auto;
+//     background: yellow;
+//   }
+// }
 
 // menu item для бургера не юзается 
 // .menu__item {} 
 
-.menu__link {
-  color: #fff;
-  text-decoration: none;
+// .menu__link {
+//   color: #fff;
+//   text-decoration: none;
 
-  @include tablet {
-    display: block;
-    font-size: 50px;
-    line-height: 100px;
-  }
+//   @include tablet {
+//     display: block;
+//     font-size: 50px;
+//     line-height: 100px;
+//   }
 
-  @include phablet {
-    font-size: 30px;
-    line-height: 70px;
-  }
+//   @include phablet {
+//     font-size: 30px;
+//     line-height: 70px;
+//   }
 
-  &:hover {
-    color: #34b3f1;
-  }
-}
+//   &:hover {
+//     color: #34b3f1;
+//   }
+// }

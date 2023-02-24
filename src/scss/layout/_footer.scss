@@ -1,11 +1,11 @@
 footer {
-  background: rgb(137, 131, 73);
+  background: white;
   height: 40vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 100px;
-  color: #fff;
+  color: var(--dtl-orange);
 
   @include tablet {
     font-size: 50px;
