@@ -2,7 +2,7 @@
 
 .ideology {
     display: flex;
-    padding-top: var(--gap-v);
+    padding-top: calc(var(--gap-v) * 1);
     gap: 1.5rem;
     color: var(--txt-dark-48);
 
@@ -35,17 +35,18 @@
 .ideology-main {
     position: relative;
     flex-basis: calc(100% / 12 * 7);
-    background: rgba(0, 255, 0, 0.1);
+    // !!
+    // background: rgba(0, 255, 0, 0.1);
     
 }
 
 .ideology-title {
-    padding-top: var(--gap-v-10);
+    padding-top: calc(var(--gap-v) * 2);
     padding-bottom: 2rem;
 }
 
 .ideology-slogan {
-    padding-bottom: var(--gap-v-25);
+    padding-bottom: calc(var(--gap-v) * 5);
     position: relative;
     z-index: 99;
 }

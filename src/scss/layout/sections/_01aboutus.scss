@@ -1,5 +1,5 @@
 .about {
-    padding-top: var(--gap-v-10);
+    padding-top: calc(var(--gap-v) * 2);
     text-align: center;
 }
 .about-title {
@@ -15,5 +15,5 @@
     font-weight: 300;
     line-height: 1.57;
     color: var(--txt-dark-102);
-    padding-bottom: var(--gap-v-5);
+    padding-bottom: calc(var(--gap-v) * 1);
 }

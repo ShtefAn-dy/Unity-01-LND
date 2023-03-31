@@ -3,8 +3,13 @@ import sum from "./module/DELETE";
 console.log(sum(3, 9));
 console.log(sum(9, 5));
 
-import gsapTest from "./module/gsaptest.js";
-import swiperTest from "./module/swiperTest.js";
+// !!! delete
+import gsapTest from "./module/TESTgsap.js";
+import swiperTest from "./module/TESTswiper.js";
+// !!! delete
+
+
+import teamSlider from "./module/teamSlider.js";
 import scrollNburger from "./module/burgerNscroll.js";
 
 scrollNburger();
