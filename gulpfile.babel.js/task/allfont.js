@@ -21,7 +21,7 @@ const allfont = () => {
     .pipe(fonter(app.fonter))
     .pipe(gulp.dest(path.font.dest))
     .pipe(ttf2woff2())
-    .pipe(gulp.dest(path.font.dest))
-}
+    .pipe(gulp.dest(path.font.dest));
+};
 
 export default allfont;

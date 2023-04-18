@@ -3,14 +3,14 @@ import Swiper from 'swiper/bundle';
 const teamSlider = new Swiper('.team-slider', {
   // Optional parameters
   direction: 'horizontal',
-  loop: true,
+  // loop: true,
 
   slidesPerView: 3,
-  spaceBetween: 20,
+  // spaceBetween: 20,
   //сколько слайдов проматываем
-  // slidesPerGroup: 2,
+  slidesPerGroup: 1,
   slideToClickedSlide: true,
-  centeredSlides: true,
+  // centeredSlides: true,
 
 
   // If we need pagination

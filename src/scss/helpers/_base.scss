@@ -51,6 +51,10 @@ h6 {
   overflow: hidden;
 }
 
+.caps {
+  text-transform: uppercase;
+}
+
 .container-outer {
   @include container-outer;
 }

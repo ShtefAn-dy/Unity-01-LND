@@ -24,7 +24,7 @@ const js = () => {
     // .pipe(uglify())
     .pipe(gulp.dest(path.js.dest, {
       sourcemaps: app.isDev
-    }))
-}
+    }));
+};
 
 export default js;

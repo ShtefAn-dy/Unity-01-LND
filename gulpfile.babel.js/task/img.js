@@ -24,7 +24,7 @@ const img = () => {
     .pipe(gulp.src(path.img.src))
     .pipe(newer(path.img.dest))
     .pipe(gulpif(app.isProd, imagemin(app.imagemin)))
-    .pipe(gulp.dest(path.img.dest))
-}
+    .pipe(gulp.dest(path.img.dest));
+};
 
 export default img;

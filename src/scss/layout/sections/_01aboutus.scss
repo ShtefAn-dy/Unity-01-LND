@@ -1,5 +1,8 @@
 .about {
-    padding-top: calc(var(--gap-v) * 2);
+    // padding-top: calc(var(--gap-v) * 2);
+    // padding-bottom: calc(var(--gap-v) * 1);
+    padding-top: clamp(4rem, 2.822rem + 5.89vw, 10rem);
+    padding-bottom: clamp(2rem, 1.411rem + 2.94vw, 5rem);
     text-align: center;
 }
 .about-title {
@@ -15,5 +18,4 @@
     font-weight: 300;
     line-height: 1.57;
     color: var(--txt-dark-102);
-    padding-bottom: calc(var(--gap-v) * 1);
 }
