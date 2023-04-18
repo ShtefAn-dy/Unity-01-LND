@@ -10,9 +10,7 @@ const swiperTest = new Swiper('.swiper', {
   //сколько слайдов проматываем
   // slidesPerGroup: 2,
   slideToClickedSlide: true,
-  centeredSlides: true,
-
-
+ 
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',

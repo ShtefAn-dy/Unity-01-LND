@@ -5,6 +5,6 @@ main{
   // background: repeating-linear-gradient(90deg, var(--dtl-grey), var(--dtl-grey) 2px, var(--bg) 2px, var(--bg) calc(100% / 6 - 2px), var(--dtl-grey) calc(100% / 6 - 2px), var(--dtl-grey) calc(100% / 6), var(--dtl-grey) 2px)
   background: repeating-linear-gradient(90deg, var(--bg), var(--bg) calc(100% / 6 - 2px), var(--dtl-grey) calc(100% / 6 - 2px), var(--dtl-grey) calc(100% / 6));
   border-left: 2px solid var(--dtl-grey);
-  border-right: 2px solid var(--dtl-grey);
+  // border-right: 2px solid var(--dtl-grey);
 }
 

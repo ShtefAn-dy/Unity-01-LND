@@ -50,7 +50,7 @@ const scss = () => {
     .pipe(size({title: "main.min.css"}))
     .pipe(gulp.dest(path.scss.dest, {
       sourcemaps: app.isDev
-    }))
-}
+    }));
+};
 
 export default scss;

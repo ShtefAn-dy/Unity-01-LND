@@ -1,9 +1,39 @@
 .section-slogan {
     font-size: 8.6rem;
+    // font-size: clamp(1rem, -0.492rem + 7.46vw, 8.6rem);
     font-weight: 700;
     line-height: 1.05;
     color: var(--txt-dark-48);
     text-transform: uppercase;
+
+    @include hd {
+        font-size: 8.6rem;
+    }
+
+    @include desktop {
+        font-size: 5rem;
+       color: firebrick;
+    }
+
+    @include laptop {
+        font-size: 4.7rem;
+        color: yellow;
+    }
+
+    @include tablet {
+        font-size: 3.7rem;
+        color: red;
+    }
+
+    @include phablet {
+        font-size: 2.7rem;
+        color: blue;
+    }
+
+    @include mobile {
+        font-size: 1.8rem;
+        color: green;
+    }
 }
 
 .section-slogan .accent {

@@ -1,53 +1,44 @@
 const scrollNburger = () => {
 
+    const burger = document.querySelector('.burger');
+    const navlist = document.querySelector('.main-nav');
+    const body = document.body;
 
-  const menu = document.querySelector('.menu__body');
-  const menuBtn = document.querySelector('.menu__icon');
+    if (burger && navlist) {
+        burger.addEventListener('click', e => {
 
-  const body = document.body;
+            burger.classList.toggle('active');
+            navlist.classList.toggle('active');
+            body.classList.toggle('lock');
+        });
 
-  if (menu && menuBtn) {
-    menuBtn.addEventListener('click', e => {
+        navlist.querySelectorAll('.main-nav__link').forEach(link => {
+            link.addEventListener('click', () => {
+                burger.classList.remove('active');
+                navlist.classList.remove('active');
+                body.classList.remove('lock');
+            });
+        });
+    }
 
-      menu.classList.toggle('active');
-      menuBtn.classList.toggle('active');
-      body.classList.toggle('lock');
-    })
+    // smooth scroll
 
-    menu.addEventListener('click', e => {
-      if (e.target.classList.contains('menu__body')) {
-        menu.classList.remove('active');
-        menuBtn.classList.remove('active');
-        body.classList.remove('lock');
-      }
+    const anchors = document.querySelectorAll('a[href*="#"]');
+    anchors.forEach(anchor => {
+        anchor.addEventListener('click', e => {
+            e.preventDefault();
+
+            const blockID = anchor.getAttribute('href').substring(1);
+
+            document.getElementById(blockID).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
     });
-
-    menu.querySelectorAll('.menu__link').forEach(link => {
-      link.addEventListener('click', e => {
-        menu.classList.remove('active');
-        menuBtn.classList.remove('active');
-        body.classList.remove('lock');
-      });
-    });
-  }
-  // ** ----------Smooth Scroll to Anchors----------------*/
-
-  const anchors = document.querySelectorAll('a[href*="#"]')
-
-  anchors.forEach(anchor => {
-    anchor.addEventListener('click', e => {
-      e.preventDefault();
-
-      // получаем ID секции к которой скроллим
-      const sectionID = anchor.getAttribute('href').substring(1) //удаляем # из атрибута ссылки (href="#contacts")
-      document.getElementById(sectionID).scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
-    });
-  });
 
 };
+
 scrollNburger();
 
 export default scrollNburger;

@@ -23,7 +23,7 @@ const favicon = () => {
     .pipe(filter([
       "favicon.ico", "apple-touch-icon.png", "manifest.json"
     ]))
-    .pipe(gulp.dest(path.root))
-}
+    .pipe(gulp.dest(path.root));
+};
 
 export default favicon;

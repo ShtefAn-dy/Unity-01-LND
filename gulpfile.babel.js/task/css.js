@@ -47,7 +47,7 @@ const css = () => {
     .pipe(size({title: "main.min.css"}))
     .pipe(gulp.dest(path.css.dest, {
       sourcemaps: app.isDev
-    }))
-}
+    }));
+};
 
 export default css;

@@ -17,6 +17,7 @@ import wofffont from "./task/wofffonts.js";
 import spritemono from "./task/spritemono.js";
 import spritemulty from "./task/spritemulty.js";
 import favicon from "./task/favicon.js";
+import icomoon from "./task/icomoon.js";
 
 const watcher = () => {
   // gulp.watch(path.pug.watch, pug).on("all", browserSync.reload)
@@ -30,6 +31,7 @@ const watcher = () => {
   gulp.watch(path.spritemono.watch, spritemono).on("all", browserSync.reload)
   gulp.watch(path.spritemulty.watch, spritemulty).on("all", browserSync.reload)
   gulp.watch(path.favicon.watch, favicon).on("all", browserSync.reload)
+  gulp.watch(path.icomoon.watch, icomoon).on("all", browserSync.reload)
 };
 
 const server = () => {
@@ -42,7 +44,7 @@ const server = () => {
 
 const build = gulp.series(
   clear,
-  gulp.parallel(html, scss, img, wofffont, spritemono, spritemulty, favicon, js)
+  gulp.parallel(html, scss, img, wofffont, spritemono, spritemulty, favicon, icomoon, js)
   //pug, css, allfont
 )
 
@@ -52,7 +54,7 @@ const dev = gulp.series(
 )
 
 export {
-  clear, html, scss, js, img, wofffont, spritemono, spritemulty, favicon
+  clear, html, scss, js, img, wofffont, spritemono, spritemulty, favicon, icomoon
   //pug, css, allfont
 };
 

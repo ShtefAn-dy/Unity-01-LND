@@ -1,60 +1,87 @@
-@mixin desktop {
-  @media (min-width: (1025px)) {
+
+
+@mixin hd {
+  @media (max-width: (1920px)) {
     @content;
   }
 }
 
-@mixin hd {
+@mixin desktop {
   @media (max-width: (1440px)) {
     @content;
   }
 }
 
 @mixin laptop {
-  @media (max-width: (1024px)) and (orientation:portrait) {
+  @media (max-width: (1024px)) {
     @content;
   }
 }
 
-@mixin laptop-hrz {
-  @media (max-width: (1024px)) and (orientation:landscape) {
-    @content;
-  }
-}
+// @mixin laptop {
+//   @media (max-width: (1024px)) and (orientation:portrait) {
+//     @content;
+//   }
+// }
+
+// @mixin laptop-hrz {
+//   @media (max-width: (1024px)) and (orientation:landscape) {
+//     @content;
+//   }
+// }
 
 @mixin tablet {
-  @media (max-width: (992px)) and (orientation:portrait) {
+  @media (max-width: (992px)){
     @content;
   }
 }
 
-@mixin tablet-hrz {
-  @media (max-width: (992px)) and (orientation:landscape) {
-    @content;
-  }
-}
+// @mixin tablet {
+//   @media (max-width: (992px)) and (orientation:portrait) {
+//     @content;
+//   }
+// }
+
+// @mixin tablet-hrz {
+//   @media (max-width: (992px)) and (orientation:landscape) {
+//     @content;
+//   }
+// }
 
 @mixin phablet {
-  @media (max-width: (768px)) and (orientation:portrait) {
+  @media (max-width: (768px)) {
     @content;
   }
 }
 
-@mixin phablet-hrz {
-  @media (max-width: (768px)) and (orientation:landscape) {
-    @content;
-  }
-}
+// @mixin phablet {
+//   @media (max-width: (768px)) and (orientation:portrait) {
+//     @content;
+//   }
+// }
+
+// @mixin phablet-hrz {
+//   @media (max-width: (768px)) and (orientation:landscape) {
+//     @content;
+//   }
+// }
+
 
 @mixin mobile {
-  @media (max-width: (576px)) and (orientation:portrait) {
+  @media (max-width: (576px)) {
     @content;
   }
 }
 
-@mixin mobile-hrz {
-  @media (max-width: (576px)) and (orientation:landscape) {
-    @content;
-  }
-}
+// @mixin mobile {
+//   @media (max-width: (576px)) and (orientation:portrait) {
+//     @content;
+//   }
+// }
+
+// @mixin mobile-hrz {
+//   @media (max-width: (576px)) and (orientation:landscape) {
+//     @content;
+//   }
+// }
 

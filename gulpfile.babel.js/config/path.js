@@ -53,5 +53,10 @@ export default {
     src: `${pathSrc}/icons/favicon/favicon.svg`,
     watch: `${pathSrc}/icons/favicon/favicon.svg`,
     dest: `${pathDest}/img/favicon`
+  },
+  icomoon: {
+    src: `${pathSrc}/icons/icomoon/**/*.svg`,
+    watch: `${pathSrc}/icons/icomoon/**/*.svg`,
+    dest: `${pathDest}/img/icomoon`
   }
 }
