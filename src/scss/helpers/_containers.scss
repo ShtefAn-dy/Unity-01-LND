@@ -10,7 +10,7 @@
 
 // Контейнер
 @mixin container-inner {
-  max-width: $container-max-widths;
+  max-width: $container-max-width;
   padding-left: $container-padding;
   padding-right: $container-padding;
   margin: 0 auto;

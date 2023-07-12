@@ -1,4 +1,13 @@
+// ** --EXAMPLE--
+// .section-slogan {
+//   font-size: 2.6rem;
+  
+//   @include hd {
+//       font-size: 1.6rem;
+//   }
+// }
 
+// ** /--END--
 
 @mixin hd {
   @media (max-width: (1920px)) {

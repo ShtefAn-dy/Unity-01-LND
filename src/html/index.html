@@ -12,13 +12,13 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- для Android и будущих браузеров -->
     <link rel="manifest" href="manifest.json">
-    <title>HTML GULP Template</title>
+    <title>UNITY PROJECT</title>
 
 </head>
 
 <body>
     <div class="container-outer">
-        @include("chunk/header.html")
+        <!-- @include("chunk/header.html") -->
 
         <main class="main">
             <!-- стили для шаблонов секций в _main.scss -->
@@ -26,14 +26,12 @@
             @include("chunk/sections/01about.html")
             @include("chunk/sections/02ideology.html")
             @include("chunk/sections/03meettheteam.html")
-            <!--@include("chunk/sections/04ourworks.html")
-            @include("chunk/sections/05getintouch.html") -->
-
+            <!-- @include("chunk/sections/04ourprojects.html") -->
             <!-- ниже идут настройки слайдеров, svg, анимации и т.п. -->
             <!-- @include("chunk/templates.html") -->
 
         </main>
-        <!-- @include("chunk/footer.html") -->
+        @include("chunk/footer.html")
     </div>
     <script src="js/main.js"></script>
 </body>

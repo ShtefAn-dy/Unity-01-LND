@@ -1,73 +1,117 @@
 .team {
-    // padding-top: calc(var(--gap-v) * 1);
-    // padding-bottom: calc(var(--gap-v) * 1);
-    padding-top: clamp(2rem, 1.411rem + 2.94vw, 5rem);
-    padding-bottom: clamp(2rem, 1.411rem + 2.94vw, 5rem);
+    padding-top: calc(var(--gap-v) * 5);
+    padding-bottom: calc(var(--gap-v) * 5);
+    // padding-top: clamp(2rem, 1.411rem + 2.94vw, 5rem);
+    // padding-bottom: clamp(2rem, 1.411rem + 2.94vw, 5rem);
    
 }
 
-.team-title,
-.teem-slogan{
+.team__title,
+.teem__slogan{
     padding-left: calc(100% / 6 + 0.5rem);
+
+    @include phablet{
+        padding-left: 2.5rem;
+    }
+    @include mobile{
+       padding-left: 0.1rem;
+    }
 }
 
-.team-title {
+.team__title {
     padding-bottom: 3rem;
    }
 
 
-.teem-slogan:last-of-type {
+.teem__slogan:last-of-type {
     padding-bottom: 7rem;
 }
 
-.team-gallery{
-
-}
-.team-slider {
+.team__swiper {
+    margin: 0 auto;
     width: calc(100% / 6 * 4);
     background-color: rgba(255, 0,0 , 0.1);
-    padding-bottom: calc(var(--gap-v) * 2);
+    padding-bottom: calc(var(--gap-vertical) * 2);
+
+    @include desktop{
+        width: calc(100% / 6 * 4);
+    }
+
+    @include phablet{
+        width: calc(100% - 5rem);
+    }
+    @include mobile{
+        width: calc(100% - 0.1rem);
+    }
 }
-.team-card {
+.team__card {
     background-color: rgba(255, 0,0 , 0.1);
+    // clip-path: circle(35%);
+    //  transition: clip-path 1s;
+    position: relative;
+    
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+       clip-path: circle(35%);
+        //clip-path: polygon(0 31%, 42% 32%, 43% 0, 65% 0%, 65% 32%, 100% 32%, 100% 59%, 65% 59%, 65% 100%, 43% 99%, 42% 60%, 0 59%);
+        transition: clip-path 0.5s ease-in-out;
+    }
+
+  &:hover {
+    // clip-path: circle(75%);
+    
+   
+    &::before{
+        clip-path: circle(75%);
+        background-color: var(--dtl-green); 
+       
+    }
+   
+  }
       
 }
-.team-card-wrapper{
+.team__card-wrapper{
     padding: 2.4rem 4rem;
     display: flex;
 }
 
-.team-image {
+.team__image {
     // width: 14rem;
     // height: 14rem;
 }
-.team-photo {
+.team__photo {
     object-fit: cover;
 }
-.team-person {
+.team__person {
     padding-left: 2.4rem;
 }
-.team-name {
+.team__name {
     font-size: 2rem;
     font-weight: 400;
     text-transform: capitalize;
     padding-bottom: 1.5rem;
 }
-.team-position {
+.team__position {
     color: var(--dtl-dark-102);
     font-size: 1.6rem;
     font-weight: 400;
     text-transform: capitalize;
 }
 
-.team-socials {
+.team__socials {
     
 }
-.team-socials-link {
+.team__socials-link {
     color: lime;
 }
 
-.team-slider-pagination .swiper-pagination-bullet {
+.team__swiper-pagination .swiper-pagination-bullet {
     background: var(--txt-dark-102);
     opacity: 0.6;
     width: 12px;
@@ -75,7 +119,7 @@
     margin: -10px 16px !important;
   }
   
-  .team-slider-pagination .swiper-pagination-bullet-active {
+  .team__swiper-pagination .swiper-pagination-bullet-active {
     background: var(--dtl-green);
     opacity: 0.6;
     width: 14px;

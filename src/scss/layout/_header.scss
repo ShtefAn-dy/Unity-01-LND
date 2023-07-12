@@ -21,7 +21,7 @@ header {
 
 // rgba(0,0,0, 0.32)
 
-.home {
+.intro {
   position: relative;
   width: 80%;
   margin: 0 auto;
@@ -30,7 +30,7 @@ header {
   }
 }
 
-.home-top {
+.intro__top {
   position: sticky;
   top: 0;
   background: rgba(255, 0, 0, 0.1);
@@ -38,7 +38,7 @@ header {
   z-index: 10;
 }
 
-.home-logo {
+.intro__logo {
   width: 200px;
   height: 50px;
   background: #000;
@@ -46,14 +46,14 @@ header {
   display: inline-block;
 }
 
-.home-body {
+.intro__body {
   padding-top: 34rem;
   padding-bottom: 32rem;
   // background: rgba(0, 255, 0, 0.1);
 
 }
 
-.home-title {
+.intro__title {
   width: 40%;
   margin-left: auto;
   margin-right: auto;
@@ -65,7 +65,7 @@ header {
   font-size: 3.8rem;
 }
 
-.home-nav {
+.intro__nav {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -75,7 +75,7 @@ header {
 
 }
 
-.home-nav__list {
+.intro__nav-list {
   background: rgba(255, 0, 0, 0.2);
   display: flex;
   justify-content: center;
@@ -83,7 +83,7 @@ header {
 
 }
 
-.home-nav__link {
+.intro__nav-link {
   color: inherit;
   text-decoration: none;
   text-transform: uppercase;
@@ -91,14 +91,14 @@ header {
 }
 
 
-.home-burger {
+.intro__burger {
   position: absolute;
   right: 0;
   top: 0;
   z-index: 999;
 }
 
-.home-burger-line {}
+
 
 
 
@@ -110,150 +110,12 @@ header {
 /* --------------Here the Burger Starts------------------ */
 
 // ** лочим скролл body при открытом меню
-// .lock {
-//   overflow: hidden;
-// }
-
-// .burger {
-//   display: none;
-
-//   & span {
-//     position: absolute;
-//     top: calc(50% - 2px);
-//     left: 0;
-//     background: yellowgreen;
-//     width: 100%;
-//     height: 4px;
-//     transition: all 0.2s ease-in-out;
-
-//     &:first-child {
-//       top: 0;
-//       background: blue;
-//     }
-
-//     &:last-child {
-//       top: auto;
-//       bottom: 0;
-//       background: red;
-//     }
-//   }
-
-//   &.active span {
-//     transform: scale(0);
-
-//     &:first-child {
-//       transform: rotate(45deg);
-//       top: calc(50% - 2px);
-//     }
-
-//     &:last-child {
-//       transform: rotate(-45deg);
-//       bottom: calc(50% - 2px);
-//     }
-//   }
-
-//   @include tablet {
-//     display: block;
-//     width: 30px;
-//     height: 30px;
-//     background: yellow;
-//     position: relative;
-//     z-index: 5;
-//     cursor: pointer;
-//   }
-// }
-
-// .main-nav {
-//   transition: all 0.4s ease-in-out;
-
-//   display: flex;
-
-//   &.active {
-//     left: 0;
-//   }
-
-//   @include tablet {
-//     position: absolute;
-//     top: 0;
-//     // left: -100%;
-//     left: 0%;
-//     height: 100vh;
-//     width: 100%;
-//     background-color: rgba(0, 0, 0, 0.3);
-//   }
-
-//   @include phablet {
-//     position: absolute;
-//     top: 0;
-//     // left: -100%;
-//     left: 0%;
-//     height: 100vh;
-//     width: 100%;
-//     background-color: #f15412;
-//     overflow: auto;
-//     display: flex;
-//   }
-// }
-
-// .main-nav__list {
-//   list-style-type: none;
-//   display: flex;
-//   // gap: 30px;
-
-//   @include tablet {
-//     flex-direction: column;
-//     padding-top: 100px;
-//     padding-left: 100px;
-//     gap: 10;
-//     height: 100%;
-//     width: 55%;
-//     background: #f15413;
-//     background: green;
-//     overflow: auto;
-//   }
-
-//   @include phablet {
-//     flex-direction: column;
-//     width: 100%;
-//     padding-top: 60px;
-//     padding-left: 120px;
-//     gap: 0;
-//     margin: auto;
-//     background: yellow;
-//   }
-// }
-
-// // menu item для бургера не юзается 
-// .main-nav__item {}
-
-// .main-nav__link {
-//   color: #fff;
-//   text-decoration: none;
-
-//   @include tablet {
-//     display: block;
-//     font-size: 4rem;
-//     line-height: 40px;
-//   }
-
-//   @include phablet {
-//     font-size: 2rem;
-//     line-height: 50px;
-//   }
-
-//   &:hover {
-//     color: #34b3f1;
-//   }
-// }
 
 body {
   &.lock {
     overflow: hidden;
   }
 }
-
-
-// menu__icon = burger
 
 .burger {
   display: none;
@@ -306,8 +168,6 @@ body {
   }
 }
 
-//menu__body = main-nav
-
 .main-nav {
   overflow-y: auto;
 
@@ -331,8 +191,6 @@ body {
   }
 }
 
-//menu__list = main-nav__list
-
 .main-nav__list {
   list-style-type: none;
   display: flex;
@@ -345,12 +203,6 @@ body {
     margin: auto; // позволяет сохранить первый пункт меню при уменьшении высоты экрана
   }
 }
-
-//menu__item = main-nav__item
-
-
-
-//menu__link = main-nav__link
 
 .main-nav__link {
 

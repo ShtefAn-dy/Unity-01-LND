@@ -1,17 +1,190 @@
-footer {
-  background: white;
-  height: 40vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 100px;
-  color: var(--dtl-orange);
+#getInTouch {
+    border-top: 2px solid var(--dtl-grey);
+}
 
-  @include tablet {
-    font-size: 50px;
-  }
+.footer {
+    width: calc(100% - $container-padding);
+    margin: 0 auto;
+    // background: repeating-linear-gradient(90deg, blue, blue 2px, transparent 1px, transparent calc(100% / 6 - 1px), blue calc(100% / 6 - 2px), blue calc(100% / 6));
+    // background: repeating-linear-gradient(90deg, var(--dtl-grey), var(--dtl-grey) 2px, var(--bg) 2px, var(--bg) calc(100% / 6 - 2px), var(--dtl-grey) calc(100% / 6 - 2px), var(--dtl-grey) calc(100% / 6), var(--dtl-grey) 2px)
+    background: repeating-linear-gradient(90deg, var(--bg), var(--bg) calc(100% / 6 - 2px), var(--dtl-grey) calc(100% / 6 - 2px), var(--dtl-grey) calc(100% / 6));
+    border-left: 2px solid var(--dtl-grey);
+    // border-right: 2px solid var(--dtl-grey);
+    padding-top: calc(var(--gap-v) * 5);
+    padding-bottom: calc(var(--gap-v) * 5);
+    //   border-top:2px solid var(--dtl-grey);.
+    text-transform: uppercase;
+}
 
-  @include phablet {
-    font-size: 30px;
-  }
+.footer-wrapper {
+    display: flex;
+    width: calc(100% / 6 * 4);
+    margin: 0 auto;
+
+    @include desktop{
+        flex-direction: column;
+    }
+    @include phablet{
+        width: calc(100% - 5rem);
+    }
+    @include mobile{
+        width: calc(100% - 0.1rem);
+    }
+}
+
+.footer-main {
+    background-color: rgba(0, 255, 0, .2);
+    flex-basis: calc(100% * 3 / 4);
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.footer-top {
+    background-color: rgba(0, 255, 0, .2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: calc(var(--gap-v) * 3);
+
+}
+
+.footer-logo {
+    height: 6rem;
+    width: 22rem;
+    border: 2px solid var(--dtl-black);
+
+
+    &__link {
+        text-decoration: none;
+        font-weight: 600;
+        // !!!
+        color: red;
+        // font-size: 1.8rem;
+        font-size: clamp(1.6rem, 1.561rem + 0.2vw, 1.8rem);
+        letter-spacing: 0.2em;
+    }
+}
+
+.footer-cta-header {
+    margin-left: auto;
+    font-size: clamp(1.7rem, 1.615rem + 0.42vw, 2rem);
+    font-weight: 800;
+    letter-spacing: 0.12em;
+
+}
+
+.footer-cta-link {
+    display: block;
+    margin-left: 1.2rem;
+    ;
+    color: var(--dtl-green);
+    font-size: clamp(1.7rem, 1.615rem + 0.42vw, 2rem);
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+
+    // .footer-nav__item
+
+    &__item {
+        list-style-type: none;
+    }
+
+    // .footer-nav__link
+
+    &__link {
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: var(--txt-dark-0)
+    }
+}
+
+.footer-aside {
+    flex-basis: calc(100% * 1 / 4);
+    background-color: rgba(255, 0, 0, 0.2);
+    padding-left: 4rem;
+    // background: url('../img/intro-bg.jpg');
+     background-image: url('symbol-defs.svg#icon-facebook-square') center center no-repeat;
+    //  background-size: contain;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: calc(var(--gap-v) * 1.75);
+    padding-bottom: calc(var(--gap-v) * 1.75);
+   
+
+}
+
+.footer-social-item {
+    list-style-type: none;
+
+    // !! лоботомированая сова
+    & * {
+        margin-right: 0.9rem;
+        color: red;
+    }
+
+
+}
+
+.footer-social-link {
+
+    & svg {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+.footer-aside-cta {
+    color: var(--dtl-black);
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.footer-aside-phone {
+    color: inherit;
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 2.5rem;
+    margin-bottom: 0.8rem;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 16px;
+        width: 16px;
+        background-image: url('../img/icomoon/symbol-defs.svg#icon-phone');
+        background-color:bisque;
+    }
+}
+
+.footer-aside-email {
+    color: inherit;
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 2.5rem;
+    margin-bottom: 0.8rem;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 16px;
+        width: 16px;
+        background-image: url('../img/icomoon/symbol-defs.svg#icon-phone');
+        background-color:bisque;
+    }
 }

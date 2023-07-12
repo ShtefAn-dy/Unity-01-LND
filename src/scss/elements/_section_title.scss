@@ -1,7 +1,36 @@
 .section-title{
-font-size: 1.8rem;
+// font-size: 1.8rem;
+font-size: clamp(1.6rem, 1.561rem + 0.2vw, 1.8rem);
 letter-spacing: 0.2em;
 font-weight: 600;
 text-transform: uppercase;
 color: var(--txt-dark-0);
+
+@include hd {
+    color: greenyellow;
 }
+
+@include desktop {
+     color: firebrick;
+}
+
+@include laptop {
+     color: yellow;
+}
+
+@include tablet {
+    
+    color: red;
+}
+
+@include phablet {
+    
+    color: blue;
+}
+
+@include mobile {
+    
+    color: green;
+}
+}
+

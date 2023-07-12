@@ -2,16 +2,14 @@
 // $wrapper-max: 1440px !default;
 // $wrapper-min: 280px !default;
 
+
+// Site width - more at __containers.scss
 $wrapper-max: 1950px;
 $wrapper-min: 320px;
 
-// Контейнер
-$container-max-widths: 1920px;
+// Container width - more at __containers.scss
+$container-max-width: 1950px;
 $container-padding: 15px;
-
-// text olors
-
-// $ff-main: "Poppins";
 
 // User Styles
 
@@ -20,27 +18,32 @@ $container-padding: 15px;
 
     --txt-dark-0: rgba(0, 0, 0, 1.0);
     --txt-dark-48: rgba(48, 48, 48, 1.0);
-    --txt-dark-102:rgba(102, 102, 102, 1.0);
-    --txt-dark-224:rgba(224, 224, 224, 1.0);
-    --txt-dark-234:rgba(234, 234, 234, 1.0);
+    --txt-dark-102: rgba(102, 102, 102, 1.0);
+    --txt-dark-224: rgba(224, 224, 224, 1.0);
+    --txt-dark-234: rgba(234, 234, 234, 1.0);
     --txt-dark-255: rgba(255, 255, 255, 1.0);
 
     // Backgrounds and Details
 
     --bg: rgba(255, 255, 255, 1.0);
-   
+
     --dtl-orange: rgba(233, 132, 87, 1.0);
     --dtl-green: rgba(27, 241, 173, 1.0);
     --dtl-grey: rgba(224, 224, 224, 1.0);
+    --dtl-black: rgba(0, 0, 0, 1.0);
 
     // Fonts
 
     --ff-main: "Poppins";
 
     // Gaps, Margins and Paddings
+    //    !!! убрать
 
-    --gap-v: 5rem;
+    --gap-vertical: 5rem;
 
-      
+    // ** padding-bottom: calc(var(--gap-v) * 2.5);
+    --gap-v: clamp(0.5rem, 0.402rem + 0.49vw, 1rem);
 
 }
+
+// !!!! main gradient size*6, margin? @include mobile size*3

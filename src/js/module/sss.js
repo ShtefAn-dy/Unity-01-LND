@@ -1,6 +1,6 @@
 import Swiper from 'swiper/bundle';
 
-const swiperTest = new Swiper('.test-swiper', {
+const swiperTest = new Swiper('.sss', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
@@ -8,7 +8,7 @@ const swiperTest = new Swiper('.test-swiper', {
   slidesPerView: 3,
   spaceBetween: 20,
   //сколько слайдов проматываем
-  // slidesPerGroup: 2,
+  slidesPerGroup: 2,
   slideToClickedSlide: true,
  
   // If we need pagination
@@ -23,8 +23,8 @@ const swiperTest = new Swiper('.test-swiper', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-prev',
+    prevEl: '.swiper-next',
   },
 
   // And if we need scrollbar
@@ -34,12 +34,3 @@ const swiperTest = new Swiper('.test-swiper', {
 });
 
 export default swiperTest;
-
-//  // import Swiper bundle with all modules installed
-//  import Swiper from 'swiper/bundle';
-
-//  // import styles bundle
-//  import 'swiper/css/bundle';
-
-//  // init Swiper:
-//  const swiper = new Swiper(...);
